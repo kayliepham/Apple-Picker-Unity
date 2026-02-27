@@ -26,14 +26,34 @@ public class Basket : MonoBehaviour {
         this.transform.position = pos;
     }
 
-    void OnCollisionEnter( Collision coll ) {
+
+    void OnCollisionEnter(Collision coll) {
         // Find out what hit this basket
         GameObject collidedWith = coll.gameObject;
-        if ( collidedWith.CompareTag("Apple") ) {
-            Destroy( collidedWith );
-            // Increase the score
-            scoreCounter.score += 100;
-            HighScore.TRY_SET_HIGH_SCORE( scoreCounter.score );
+
+        // Only handle apples (red or gold) by tag
+        if (!collidedWith.CompareTag("Apple")) return;
+
+         // Read the points from the Apple script on that apple
+        Apple appleScript = collidedWith.GetComponent<Apple>();
+
+        // If it's poison: destroy it and count as a "miss" (lose a basket)
+        if (appleScript != null && appleScript.isPoison) {
+            Destroy(collidedWith);
+
+            ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
+            apScript.AppleMissed();
+
+            return; // IMPORTANT: don't give points
         }
+
+        // Normal apples (red/gold): award points
+        int points = 100; // fallback
+        if (appleScript != null) points = appleScript.points;
+
+        Destroy(collidedWith);
+        // Increase the score
+        scoreCounter.score += points;
+        HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
     }
 }

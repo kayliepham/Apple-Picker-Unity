@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431cc392796e84060b96a942b2f4fde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  resetHighScoreNow: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +862,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5422217410110742022, guid: 15f56278636694d6bab83eeabd74192c, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5422217410110742022, guid: 15f56278636694d6bab83eeabd74192c, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 1528416578709645496, guid: 3a88f20002b9c41b7a656823e1e9d637, type: 3}
+    - target: {fileID: 5422217410110742022, guid: 15f56278636694d6bab83eeabd74192c, type: 3}
+      propertyPath: appleDropDelay
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5422217410110742022, guid: 15f56278636694d6bab83eeabd74192c, type: 3}
+      propertyPath: badApplePrefab
+      value: 
+      objectReference: {fileID: 1528416578709645496, guid: 3439e4a9af2ad4960b44af8db5eca6f6, type: 3}
+    - target: {fileID: 5422217410110742022, guid: 15f56278636694d6bab83eeabd74192c, type: 3}
+      propertyPath: changeDirChance
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5422217410110742022, guid: 15f56278636694d6bab83eeabd74192c, type: 3}
+      propertyPath: goldApplePrefab
+      value: 
+      objectReference: {fileID: 1528416578709645496, guid: 10ff0f142f83f42d7af8d35490f70167, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

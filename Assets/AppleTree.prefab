@@ -188,11 +188,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b2b04c6acd74191b8c03b8d4f248c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  applePrefab: {fileID: 1528416578709645496, guid: 10ff0f142f83f42d7af8d35490f70167, type: 3}
-  speed: 15
+  applePrefab: {fileID: 1528416578709645496, guid: 3a88f20002b9c41b7a656823e1e9d637, type: 3}
+  goldApplePrefab: {fileID: 1528416578709645496, guid: 10ff0f142f83f42d7af8d35490f70167, type: 3}
+  badApplePrefab: {fileID: 1528416578709645496, guid: 3439e4a9af2ad4960b44af8db5eca6f6, type: 3}
+  badAppleChance: 0.15
+  goldChance: 0.1
+  speed: 20
   leftAndRightEdge: 24
-  changeDirChance: 0.02
-  appleDropDelay: 0.5
+  changeDirChance: 0.05
+  appleDropDelay: 0.4
 --- !u!1 &3067978360324177228
 GameObject:
   m_ObjectHideFlags: 0
